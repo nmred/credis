@@ -1,0 +1,18 @@
+adlist.o: adlist.c adlist.h zmalloc.h \
+  ../deps/jemalloc/include/jemalloc/jemalloc.h
+crc64.o: crc64.c
+debug.o: debug.c redis.h config.h fmacroc.h zmalloc.h \
+  ../deps/jemalloc/include/jemalloc/jemalloc.h release.h version.h dict.h
+dict.o: dict.c fmacroc.h dict.h zmalloc.h \
+  ../deps/jemalloc/include/jemalloc/jemalloc.h
+redis.o: redis.c redis.h config.h fmacroc.h zmalloc.h \
+  ../deps/jemalloc/include/jemalloc/jemalloc.h release.h version.h dict.h
+release.o: release.c release.h version.h crc64.h
+sds.o: sds.c sds.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h
+setproctitle.o: setproctitle.c
+sha1.o: sha1.c sha1.h config.h
+test.o: test.c zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h \
+  adlist.h
+testsha1.o: testsha1.c sha1.h
+zmalloc.o: zmalloc.c config.h zmalloc.h \
+  ../deps/jemalloc/include/jemalloc/jemalloc.h
