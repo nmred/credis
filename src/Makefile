@@ -68,6 +68,9 @@ test: test.o zmalloc.o adlist.o dict.o
 
 testsha1: testsha1.o sha1.o
 	$(REDIS_LD) -o $@ $^ $(FINAL_LIBS)
+
+testae: testae.o zmalloc.o ae.o
+	$(REDIS_LD) -o $@ $^ $(FINAL_LIBS)
 	
 redis: redis.o setproctitle.o zmalloc.o dict.o debug.o release.o crc64.o sds.o config.o util.o
 	$(REDIS_LD) -o $@ $^ $(FINAL_LIBS)

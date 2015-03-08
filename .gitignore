@@ -29,3 +29,4 @@ deps/lua/src/liblua.a
 *.dSYM
 src/test
 src/testsha1
+src/test*
